@@ -1,0 +1,23 @@
+{
+  "name": "practice-with-apis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "apex-notifications.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielholthus/practice-with-APIs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielholthus/practice-with-APIs/issues"
+  },
+  "homepage": "https://github.com/danielholthus/practice-with-APIs#readme",
+  "dependencies": {
+    "node-fetch": "^3.2.5",
+    "twilio": "^3.77.2"
+  }
+}
