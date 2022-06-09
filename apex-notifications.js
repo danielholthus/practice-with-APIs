@@ -10,11 +10,11 @@ const fetchMapData = () => {
         const mapData = resp.data;
         console.log(mapData);
 
-        if (mapData.next.map == "World's Edge"){
+        if (true || mapData.next.map == "World's Edge"){
             for(i in numbers) {
                 client.messages
                 .create({
-                    body: 'Cake time, bucko! World\'s Edge in ' + mapData.next.DurationInMinutes.toString() + ' minutes!',
+                    body: 'Cake time, bucko! World\'s Edge in ' + mapData.current.remainingMins.toString() + ' minutes!',
                     from: '+16073005670',
                     to: numbers[i]
                 })
