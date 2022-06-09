@@ -6,10 +6,7 @@ const numbers = ['+16207555383', '+18317470619'];
 
 const fetchMapData = () => {
     axios.get('https://api.mozambiquehe.re/maprotation?auth=a15c51c67f777eddc9ec7a4f5d3d1d1e').then(resp => {
-
         const mapData = resp.data;
-        console.log(mapData);
-
         if (true || mapData.next.map == "World's Edge"){
             for(i in numbers) {
                 client.messages
@@ -22,7 +19,7 @@ const fetchMapData = () => {
                 .catch(err => console.log(err));
             }
         }
-    });
+    }).catch(err => console.log(err));
 };
 
 fetchMapData();
