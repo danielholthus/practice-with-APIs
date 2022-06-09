@@ -10,8 +10,7 @@ const fetchMapData = () => {
         mapData = resp.data;
         console.log(mapData);
 
-        // if (mapData.next.map == "World's Edge" && mapData.current.remainingMins <= 30){
-        if (true){
+        if (mapData.next.map == "World's Edge" && mapData.current.remainingMins <= 30){
             for(i in numbers) {
                 client.messages
                 .create({
