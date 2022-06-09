@@ -14,7 +14,7 @@ const fetchMapData = () => {
             for(i in numbers) {
                 client.messages
                 .create({
-                    body: 'Cake time, bucko! World\'s Edge in ' + mapData.next.DurationInMinutes + ' minutes!',
+                    body: 'Cake time, bucko! World\'s Edge in ' + mapData.next.DurationInMinutes.toString() + ' minutes!',
                     from: '+16073005670',
                     to: numbers[i]
                 })
