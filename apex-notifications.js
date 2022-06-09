@@ -7,8 +7,8 @@ const numbers = ['+16207555383', '+18317470619'];
 const fetchMapData = () => {
     axios.get('https://api.mozambiquehe.re/maprotation?auth=a15c51c67f777eddc9ec7a4f5d3d1d1e').then(resp => {
         const mapData = resp.data;
-        if(mapData.next.map == "World's Edge"){
-            for(i in numbers) {
+        if (mapData.next.map == "World's Edge" && mapData.current.remainingMins <= 60) {
+            for (i in numbers) {
                 client.messages
                 .create({
                     body: 'Cake time, bucko! World\'s Edge in ' + mapData.current.remainingMins.toString() + ' minutes!',
