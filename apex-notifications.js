@@ -7,14 +7,14 @@ const numbers = ['+16207555383', '+18317470619'];
 const fetchMapData = () => {
     axios.get('https://api.mozambiquehe.re/maprotation?auth=a15c51c67f777eddc9ec7a4f5d3d1d1e').then(resp => {
 
-        mapData = resp.data;
+        const mapData = resp.data;
         console.log(mapData);
 
-        if (mapData.next.map == "World's Edge" && mapData.current.remainingMins < 31){
+        if (mapData.next.map == "World's Edge"){
             for(i in numbers) {
                 client.messages
                 .create({
-                    body: 'Cake time, bucko! World\'s Edge in 30 minutes!',
+                    body: 'Cake time, bucko! World\'s Edge in ' + mapData.next.DurationInMinutes + ' minutes!',
                     from: '+16073005670',
                     to: numbers[i]
                 })
